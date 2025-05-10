@@ -1,0 +1,33 @@
+
+
+{
+    "comics" : [
+        {
+            "id": "dylan-dog",
+            "title": "Dylan Dog: l'Alba dei Morti Viventi",
+            "cover": "Images/dylan_dog.jpg",
+            "publisher": "Sergio Bonelli",
+            "author": "Claudio Villa",
+            "rating": 4.8,
+            "description": "A thrilling horror comic featuring the nightmarish adventures of Dylan Dog, the Nightmare Investigator, as he battles the living dead in a chilling tale.",
+            "releaseYear": 1986,
+            "genre": "Horror"
+        },
+        {   "id": "saga",
+            "title": "Saga",
+            "cover": "Images/SAGA.jpg"
+        },
+        {   "id": "one-piece",
+            "title": "One Piece",
+            "cover": "Images/onepiece.jpg"
+        },
+        {   "id": "watchmen",
+            "title": "Watchmen",
+            "cover": "Images/watchmen.jpg"
+        },
+        {   "id": "chainsaw-man",
+            "title": "Chainsaw Man",
+            "cover": "Images/chainsawman.jpg"
+        }
+    ]
+}
