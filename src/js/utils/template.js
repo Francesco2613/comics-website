@@ -18,6 +18,7 @@ export async function renderTemplate(templatePath, data = {}) {
       template = template
         .replace("{cover}", data.cover || "")
         .replace("{title}", data.title || "Unknown Title")
+        .replace("__title__", data.title || "Unknown Title")
         .replace(
           "{description}",
           data.description || "No description available"
