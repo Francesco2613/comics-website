@@ -1,33 +1,59 @@
-
-
 {
-    "comics" : [
-        {
-            "id": "dylan-dog",
-            "title": "Dylan Dog: l'Alba dei Morti Viventi",
-            "cover": "Images/dylan_dog.jpg",
-            "publisher": "Sergio Bonelli",
-            "author": "Claudio Villa",
-            "rating": 4.8,
-            "description": "A thrilling horror comic featuring the nightmarish adventures of Dylan Dog, the Nightmare Investigator, as he battles the living dead in a chilling tale.",
-            "releaseYear": 1986,
-            "genre": "Horror"
-        },
-        {   "id": "saga",
-            "title": "Saga",
-            "cover": "Images/SAGA.jpg"
-        },
-        {   "id": "one-piece",
-            "title": "One Piece",
-            "cover": "Images/onepiece.jpg"
-        },
-        {   "id": "watchmen",
-            "title": "Watchmen",
-            "cover": "Images/watchmen.jpg"
-        },
-        {   "id": "chainsaw-man",
-            "title": "Chainsaw Man",
-            "cover": "Images/chainsawman.jpg"
-        }
-    ]
+  "comics": [
+    {
+      "id": "dylan-dog",
+      "title": "Dylan Dog: l'Alba dei Morti Viventi",
+      "cover": "Images/dylan_dog.jpg",
+      "publisher": "Sergio Bonelli",
+      "author": "Claudio Villa",
+      "rating": 4.7,
+      "description": "A thrilling horror comic featuring the nightmarish adventures of Dylan Dog, the Nightmare Investigator, as he battles the living dead in a chilling tale.",
+      "releaseYear": 1986,
+      "genre": "Horror"
+    },
+    {
+      "id": "saga",
+      "title": "Saga",
+      "cover": "Images/SAGA.jpg",
+      "publisher": "Image Comics",
+      "author": "Brian K. Vaughan",
+      "rating": 4.1,
+      "description": "A sci-fi/fantasy epic about two lovers from warring races trying to protect their daughter while fleeing across the galaxy.",
+      "releaseYear": 2012,
+      "genre": "Space Opera/Fantasy"
+    },
+    {
+      "id": "one-piece",
+      "title": "One Piece",
+      "cover": "Images/onepiece.jpg",
+      "publisher": "Weekly Shōnen Jump",
+      "author": "Eiichirō Oda",
+      "rating": 3.5,
+      "description": "A young pirate, Luffy, sails the seas with his crew in search of the legendary treasure One Piece to become the Pirate King.",
+      "releaseYear": 1997,
+      "genre": "Fantasy/Adventure"
+    },
+    {
+      "id": "watchmen",
+      "title": "Watchmen",
+      "cover": "Images/watchmen.jpg",
+      "publisher": "DC Comics",
+      "author": "Alan Moore, Dave Gibson",
+      "rating": 5,
+      "description": "In an alternate 1980s, retired superheroes investigate a murder while uncovering a conspiracy that could change the world.",
+      "releaseYear": 1986,
+      "genre": "Superhero/Fantasy"
+    },
+    {
+      "id": "chainsaw-man",
+      "title": "Chainsaw Man",
+      "cover": "Images/chainsawman.jpg",
+      "publisher": "Weekly Shōnen Jump",
+      "author": "Tatsuki Fujimoto",
+      "rating": 3.2,
+      "description": "Denji, a devil hunter fused with a chainsaw demon, battles devils in a brutal world while chasing a better life.",
+      "releaseYear": 2018,
+      "genre": "Horror"
+    }
+  ]
 }
