@@ -1,5 +1,4 @@
-<!-- Navigation Bar -->
-<!-- <nav
+<nav
   class="fixed top-0 w-full z-50 bg-black/60 border-b border-zinc-800 backdrop-blur-sm"
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,52 +61,43 @@
       <div class="-mr-2 flex md:hidden">
         <button
           class="inline-flex items-center justify-center p-2 rounded-md text-cbrand-400 hover:text-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
         >
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
   </div>
-</nav> -->
 
-<!-- Comic Detail Page -->
-<div class="max-w-4x1 mx-auto">
-  <button class="text-white mb-4">Close (X)</button>
-  <div class="flex flex-col md:flex-row gap-6">
-    <img
-      src="{cover}"
-      alt="__title__ Cover"
-      class="w-full md:w-1/3 rounded-lg shadow-lg"
-    />
-    <div class="text-white">
-      <h2 class="text-3xl font-bold mb-2">{title}</h2>
-      <p class="text-cbrand-300 mb-4">{description}</p>
-      <div class="grid grid-cols-2 gap-2 text-sm">
-        <span>Publisher:</span><span>{publisher}</span> <span>Author:</span
-        ><span>{author}</span> <span>Rating:</span><span>{rating}</span>
-        <span>Release:</span><span>{releaseYear}</span> <span>Genre:</span
-        ><span>{genre}</span>
-      </div>
-      <div class="mt-4">
-        <button
-          class="bg-cbrand-1000 hover:bg-cbrand-1002 px-4 py-2 rounded-lg"
-        >
-          Add to list
-        </button>
-        <button class="ml-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg">
-          Rate This
-        </button>
-      </div>
+  <!-- Mobile menu, shown/hidden via JavaScript -->
+  <div class="md:hidden hidden" id="#mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a
+        href="/"
+        class="home-link text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Home</a
+      >
+      <a
+        href="#"
+        class="text-cbrand-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Discover</a
+      >
+      <a
+        href="#"
+        class="text-cbrand-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Series</a
+      >
+      <a
+        href="#"
+        class="text-cbrand-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        >Lists</a
+      >
+      <a
+        href="#"
+        class="text-cbrand-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        >News</a
+      >
     </div>
   </div>
-</div>
-
-<script>
-  function closeDetail() {
-    const detailSection = document.getElementById("comic-detail");
-    if (detailSection) {
-      detailSection.remove();
-    }
-    window.history.back();
-  }
-</script>
+</nav>

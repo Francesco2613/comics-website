@@ -1,27 +1,34 @@
-/**
- * Fetches and renders an HTML template with data
- *
- *
- */
+// src/js/utils/template.js
+let cachedTemplate = null;
 
-export async function renderTemplate(templatePath, data) {
+export async function renderTemplate(templatePath, data = {}) {
+  console.log("Fetching template:", templatePath, "with data:", data);
   try {
-    const response = await fetch(templatePath);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+    if (!cachedTemplate || cachedTemplate.path !== templatePath) {
+      const response = await fetch(templatePath);
+      console.log("Template fetch status:", response.status);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      cachedTemplate = { path: templatePath, content: await response.text() };
     }
-    let template = await response.text();
-
-    // Replace placeholders with data
-    return template
-      .replace("{cover}", data.cover)
-      .replace("{title}", data.title)
-      .replace("{description}", data.description)
-      .replace("{publisher}", data.publisher)
-      .replace("{author}", data.author)
-      .replace("{rating}", data.rating)
-      .replace("{releaseYear}", data.releaseYear)
-      .replace("{genre}", data.genre);
+    let template = cachedTemplate.content;
+    // Only replace placeholders if data is provided
+    if (Object.keys(data).length > 0) {
+      template = template
+        .replace("{cover}", data.cover || "")
+        .replace("{title}", data.title || "Unknown Title")
+        .replace(
+          "{description}",
+          data.description || "No description available"
+        )
+        .replace("{publisher}", data.publisher || "Unknown Publisher")
+        .replace("{author}", data.author || "Unknown Author")
+        .replace("{rating}", data.rating != null ? data.rating : "N/A")
+        .replace("{releaseYear}", data.releaseYear || "N/A")
+        .replace("{genre}", data.genre || "Unknown Genre");
+    }
+    return template;
   } catch (error) {
     console.error(`Error loading template ${templatePath}:`, error);
     throw error;
