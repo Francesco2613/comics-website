@@ -293,53 +293,6 @@
           animation-delay: 1s;
         }
       </style>
-
-      <!-- Carousel JavaScript -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const slides = document.querySelectorAll(".carousel-slide");
-          const indicators = document.querySelectorAll(".carousel-indicator");
-          let currentSlide = 0;
-
-          // Function to change slides
-          function showSlide(index) {
-            // Hide all slides
-            slides.forEach((slide) => {
-              slide.style.opacity = "0";
-            });
-
-            // Update indicators
-            indicators.forEach((indicator) => {
-              indicator.classList.remove("active");
-              indicator.classList.remove("bg-cbrand-1001");
-              indicator.classList.add("bg-white", "bg-opacity-50");
-            });
-
-            // Show the selected slide
-            slides[index].style.opacity = "1";
-
-            // Update the active indicator
-            indicators[index].classList.add("active", "bg-cbrand-1001");
-            indicators[index].classList.remove("bg-white", "bg-opacity-50");
-
-            // Update current slide index
-            currentSlide = index;
-          }
-
-          // Auto-rotate slides
-          setInterval(() => {
-            const nextSlide = (currentSlide + 1) % slides.length;
-            showSlide(nextSlide);
-          }, 5000); // Change slide every 5 seconds
-
-          // Set up indicator click handlers
-          indicators.forEach((indicator, index) => {
-            indicator.addEventListener("click", () => {
-              showSlide(index);
-            });
-          });
-        });
-      </script>
     </section>
 
     <!-- Popular This Week Section -->

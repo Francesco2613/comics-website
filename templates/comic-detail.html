@@ -101,3 +101,13 @@
     </div>
   </div>
 </div>
+
+<script>
+  function closeDetail() {
+    const detailSection = document.getElementById("comic-detail");
+    if (detailSection) {
+      detailSection.remove();
+    }
+    window.history.back();
+  }
+</script>

@@ -3,6 +3,8 @@
 import { fetchComics } from "./services/dataService.js";
 import { setupComicCards } from "./components/comicCard.js";
 import { renderComicCards } from "./components/comicCard.js";
+import { initCarousel } from "./components/carousel.js";
+import { setupHomeNavigation } from "./utils/navigation.js";
 
 async function init() {
   try {
@@ -22,6 +24,12 @@ async function init() {
         detailSection.remove();
       }
     });
+
+    // Set up Home Button
+    setupHomeNavigation();
+
+    // Initialize Carousel
+    initCarousel();
   } catch (error) {
     console.error("Failed to initialize app:", error);
   }

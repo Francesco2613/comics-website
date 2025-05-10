@@ -1,9 +1,7 @@
 import { renderTemplate } from "../utils/template.js";
 
-/**
- * Shows the comic detail page
- */
 export async function showComicDetail(comic) {
+  console.log("Showing comic detail for:", comic);
   let detailSection = document.getElementById("comic-detail");
   if (!detailSection) {
     detailSection = document.createElement("section");
@@ -19,11 +17,11 @@ export async function showComicDetail(comic) {
     detailSection.innerHTML = html;
     detailSection.scrollTop = 0;
 
-    //Push a new history state
+    // Push a new history state
     window.history.pushState({ comicId: comic.id }, "", `/comic/${comic.id}`);
   } catch (error) {
     console.error("Error rendering comic detail:", error);
     detailSection.innerHTML =
-      "<p class=text-white text-center>Error loading comic details.</p>";
+      '<p class="text-white text-center">Error loading comic details.</p>';
   }
 }
