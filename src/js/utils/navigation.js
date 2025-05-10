@@ -1,6 +1,6 @@
 // src/js/utils/navigation.js
 export function setupHomeNavigation() {
-  const homeLink = document.querySelector('a[href="index.html"], a[href="/"]');
+  const homeLink = document.querySelector(".home-link");
   if (homeLink) {
     homeLink.addEventListener("click", (event) => {
       event.preventDefault();
@@ -8,7 +8,14 @@ export function setupHomeNavigation() {
       if (detailSection) {
         detailSection.remove();
       }
-      window.location.href = "index.html";
+      // Replace the current history state with the home page
+      window.history.replaceState({}, "", "/");
+      // Navigate to the home page
+      window.location.href = "/";
+      // Ensure no hash remains
+      if (window.location.hash) {
+        window.location.hash = "";
+      }
     });
   }
 }
