@@ -4,7 +4,7 @@ import { setupComicCards, renderComicCards } from "./components/comicCard.js";
 import { setupHomeNavigation } from "./utils/navigation.js";
 import { initCarousel } from "./components/carousel.js";
 import { initNav } from "./components/nav.js";
-import { generateConfetti } from "./utils/subscriptionPopUp.js";
+import { generatePopUp } from "./utils/subscriptionPopUp.js";
 
 async function init() {
   try {
@@ -56,7 +56,7 @@ async function init() {
 
     setupHomeNavigation();
     initCarousel();
-    generateConfetti();
+    generatePopUp();
 
     console.log("Final nav count:", document.querySelectorAll("nav").length);
   } catch (error) {

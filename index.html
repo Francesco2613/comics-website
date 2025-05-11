@@ -122,7 +122,7 @@
           </p>
           <div class="flex flex-wrap gap-4 animate-fadeIn animation-delay-500">
             <a
-              id="subscription"
+              id="register-button"
               href="#"
               class="bg-cbrand-1000 hover:bg-cbrand-1002 px-6 py-3 rounded-lg text-lg font-medium transition-colors"
             >
@@ -814,6 +814,63 @@
         </div>
       </div>
     </footer>
+
+    <!-- Register Pop-Up Modal -->
+    <div
+      id="register-modal"
+      class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50"
+    >
+      <div class="rounded-lg w-full max-w-5xl mx-4 flex flex-col sm:flex-row">
+        <img
+          src="Images/Cesare.png"
+          alt="Join ComicBoxd"
+          class="w-full sm:w-1/3 h-48 sm:h-auto object-cover rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+        />
+        <div class="p-4 sm:w-1/2">
+          <h2 class="text-xl font-bold text-white mb-4">Join ComicBoxd!</h2>
+
+          <p class="text-cbrand-300 mb-4">
+            🎉 Thanks for choosing to join ComicBoxd! We're excited to have you
+            on board. Choose the plan that suits you best and start exploring a
+            world of comics!
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <!-- Free Plan -->
+            <div class="border border-cbrand-300 rounded-lg p-4">
+              <h3 class="text-lg font-semibold text-white mb-2">Basic Plan</h3>
+              <p class="text-cbrand-300 mb-2">
+                Access to thousands of free comics and user ratings, but with
+                tons of advertising that will ruin your experience.
+              </p>
+              <p class="text-xl text-white font-bold">$0/month</p>
+            </div>
+
+            <!-- Premium Plan -->
+            <div
+              class="border border-cbrand-1002 bg-cbrand-1002/10 rounded-lg p-4"
+            >
+              <h3 class="text-lg font-semibold text-white mb-2">
+                Premium Plan
+              </h3>
+              <p class="text-cbrand-300 mb-2">
+                Everything in Basic, plus exclusive content, early releases, and
+                creator spotlights.
+              </p>
+              <p class="text-xl text-white font-bold">$59.99/month</p>
+            </div>
+          </div>
+
+          <button
+            id="register-modal-close"
+            class="bg-cbrand-1000 hover:bg-cbrand-1002 px-3 py-1 rounded text-lg text-white"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script type="module" src="src/js/main.js"></script>
   </body>
