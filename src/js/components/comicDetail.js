@@ -55,7 +55,9 @@ export async function showComicDetail(comic) {
         detailSection.remove();
         // Show homepage content
         homepageElements.forEach((el) => {
-          el.classList.remove("hidden");
+          if (!(el.id === "register-modal")) {
+            el.classList.remove("hidden");
+          }
           console.log(
             `Showed element: ${el.tagName}${el.id ? `#${el.id}` : ""}`
           );
