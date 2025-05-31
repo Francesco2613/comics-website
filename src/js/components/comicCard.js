@@ -67,3 +67,35 @@ export function setupComicCards(comics) {
     });
   });
 }
+
+/**
+ * ---------------------------------------- NEW CODE FOR API ----------------------------------------
+ */
+
+/* export function renderComicCards(comics) {
+  const container = document.getElementById("comics-container");
+  container.innerHTML = ""; // Clear existing cards
+
+  comics.forEach((comic) => {
+    const card = document.createElement("div");
+    card.className = "comic-card bg-cbrand-900 rounded-lg overflow-hidden";
+    card.innerHTML = `
+      <img src="${comic.cover}" alt="${comic.title}" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-bold text-white">${comic.title}</h3>
+        <p class="text-cbrand-300 text-sm">${comic.publisher}</p>
+        <p class="text-cbrand-300 text-sm">Issue #${comic.issueNumber}</p>
+      </div>
+    `;
+    card.addEventListener("click", () => {
+      // Load detail view (unchanged)
+      console.log(`Clicked comic: ${comic.id}`);
+    });
+    container.appendChild(card);
+  });
+}
+
+export function setupComicCards(comics) {
+  // Existing logic for event listeners, if any
+  console.log("Comic cards set up:", comics.length);
+} */
